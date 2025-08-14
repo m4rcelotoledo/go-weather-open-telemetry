@@ -1,0 +1,47 @@
+### Consultar o clima de uma cidade pelo CEP - Service A
+POST http://localhost:8080/weather
+Content-Type: application/json
+
+{
+    "cep": "45807000"
+}
+
+### Consultar o clima de outra cidade pelo CEP - Service A
+POST http://localhost:8080/weather
+Content-Type: application/json
+
+{
+    "cep": "01001000"
+}
+
+### Consultar CEP invalido - Service A
+POST http://localhost:8080/weather
+Content-Type: application/json
+
+{
+    "cep": "1234567890"
+}
+
+### Consultar CEP não encontrado - Service A
+POST http://localhost:8080/weather
+Content-Type: application/json
+
+{
+    "cep": "99999999"
+}
+
+### Consultar outro CEP não encontrado - Service A
+POST http://localhost:8080/weather
+Content-Type: application/json
+
+{
+    "cep": "00000000"
+}
+
+### Consultar CEP no Service B
+POST http://localhost:8081/weather
+Content-Type: application/json
+
+{
+    "cep": "45807000"
+}
